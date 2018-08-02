@@ -7,15 +7,16 @@ public class Game {
 		BigTexts text1 = new BigTexts();
 		Scanner scan = new Scanner(System.in);
 		Scanner scan2 = new Scanner(System.in);
+		hero.setLife(1);
 		
 		
-		/*text1.printTitle();
+		text1.printTitle();
 		text1.printIntro();
 		
 		String x = scan.nextLine();
-		if(x.equals("y")) {
+		while(x.equals("y") && hero.getLife()>0) {
 			
-			text1.statExplained();*/
+			text1.statExplained();
 		
 //Character creation
 		
@@ -49,19 +50,25 @@ public class Game {
 			}while(s.equals("n"));
 		
 			Foe bat1 = new Foe();
-			bat1.setName("Huge bat");
-			bat1.setArmor(2);
-			bat1.setStrength(8);
-			bat1.setDext(4);
-			bat1.setLife(50);
+			bat1.setName("Scary Vampire");
+			bat1.setArmor(15);
+			bat1.setStrength(500);
+			bat1.setDext(500);
+			bat1.setLife(500);
 			
 			hero.fight(bat1);
 			
-			/*}
-		else {
+			}
+		if(x.equals("n")) {
 			text1.losingText();
-			text1.gameOver();
-		}*/
+		}
+		else if(hero.getLife()<=0){
+			text1.dyingText();		
+		}
+		else {
+			
+		}
+		text1.gameOver();
 	}
 
 }
