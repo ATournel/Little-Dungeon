@@ -10,10 +10,62 @@ public class Character {
 			int mana;
 			int armor;
 			int magicArmor;
+			int nbOfKeys;
+			public String getName() {
+				return name;
+			}
+			public void setName(String name) {
+				this.name = name;
+			}
+			public int getStrength() {
+				return strength;
+			}
+			public void setStrength(int strength) {
+				this.strength = strength;
+			}
+			public int getDext() {
+				return dext;
+			}
+			public void setDext(int dext) {
+				this.dext = dext;
+			}
+			public int getIntell() {
+				return intell;
+			}
+			public void setIntell(int intell) {
+				this.intell = intell;
+			}
+			public int getLife() {
+				return life;
+			}
+			public void setLife(int life) {
+				this.life = life;
+			}
+			public int getMana() {
+				return mana;
+			}
+			public void setMana(int mana) {
+				this.mana = mana;
+			}
+			public int getArmor() {
+				return armor;
+			}
+			public void setArmor(int armor) {
+				this.armor = armor;
+			}
+			public int getMagicArmor() {
+				return magicArmor;
+			}
+			public void setMagicArmor(int magicArmor) {
+				this.magicArmor = magicArmor;
+			}
+			public int getNbOfKeys() {
+				return nbOfKeys;
+			}
+			public void setNbOfKeys(int nbOfKeys) {
+				this.nbOfKeys = nbOfKeys;
+			}
 		
-		/*System.out.println(Wise_Mage.getName()+", here are your stats:\nStrength(how many items you can carry and how hard you strike with melee!): "+Wise_Mage.getStrength()+"\n"
-		*		+"Dexterity(your evade stat and how hard you strike with ranged!): "+Wise_Mage.getDext()+"\nIntelligence(number and quality of skills you can lurn, also helps in some conversations): "+Wise_Mage.getIntell()+
-		*		"\nHealth points(how much damage you can take before facing your death): "+Wise_Mage.getLife()+"\nMana(how many magic points you can use to cast magics!): "+Wise_Mage.getMana());
-		*/
+		
 }
 
