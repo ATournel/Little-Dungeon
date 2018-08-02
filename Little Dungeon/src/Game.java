@@ -9,13 +9,13 @@ public class Game {
 		Scanner scan2 = new Scanner(System.in);
 		
 		
-		text1.printTitle();
+		/*text1.printTitle();
 		text1.printIntro();
 		
 		String x = scan.nextLine();
 		if(x.equals("y")) {
 			
-			text1.statExplained();
+			text1.statExplained();*/
 		
 //Character creation
 		
@@ -48,11 +48,20 @@ public class Game {
 			s = scan.nextLine();
 			}while(s.equals("n"));
 		
-		}
+			Foe bat1 = new Foe();
+			bat1.setName("Huge bat");
+			bat1.setArmor(2);
+			bat1.setStrength(8);
+			bat1.setDext(4);
+			bat1.setLife(50);
+			
+			hero.fight(bat1);
+			
+			/*}
 		else {
 			text1.losingText();
 			text1.gameOver();
-		}
+		}*/
 	}
 
 }

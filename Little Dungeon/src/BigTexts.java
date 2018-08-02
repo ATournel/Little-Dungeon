@@ -552,18 +552,7 @@ public class BigTexts {
 		
 	}
 	
-	public void gameOver() throws InterruptedException {
-	    System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(200);
+	public void gameOver() throws InterruptedException {	    
 		System.out.println("");Thread.sleep(200);
 		System.out.println("");Thread.sleep(200);
 		System.out.println("");Thread.sleep(200);
