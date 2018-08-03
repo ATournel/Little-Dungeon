@@ -10,8 +10,8 @@ public class Game {
 		hero.setLife(1);
 		
 		
-		//text1.printTitle();
-		//text1.printIntro();
+		text1.printTitle();
+		text1.printIntro();
 		
 		String x = scan.nextLine();
 		while(x.equals("y") && hero.getLife()>0) {
@@ -57,11 +57,14 @@ public class Game {
 			System.out.println("\nMana: "+hero.getMana());
 			System.out.println("\nArmor: "+hero.getArmor());
 			System.out.println("\nMagic armor: "+hero.getMagicArmor());
-			System.out.println("You will start your adventure with your "+Character.heroWeapon.getName()+", your " +Character.heroArmor.getName()+", your "+Character.heroShield.getName()+" and a few basic magics.");
+			System.out.println("You will start your adventure with your "+Character.heroWeapon.getName()+", your " +Character.heroArmor.getName()+",\nyour "+Character.heroShield.getName()+", a few basic magics and a few potions.");
 			System.out.println("\n\nDo you want to keep this character?\nType 'y' or 'n':");
 			s = scan.nextLine();
 			}while(s.equals("n"));
 						
+			
+			hero.setHealthPotionNb(5);
+			hero.setManaPotionNb(5);
 			
 			Character.fireMagic.setName("Fire ball");
 			Character.fireMagic.setDamages(50+hero.getIntell());
@@ -90,14 +93,14 @@ public class Game {
 			
 		
 			Foe bat1 = new Foe();
-			bat1.setName("Scary Vampire");
+			bat1.setName("Fire spirit");
 			bat1.setArmor(10);
 			bat1.setStrength(15);
 			bat1.setDext(15);
 			bat1.setIntell(15);
 			bat1.setLife(500);
 			bat1.setType("fire");
-			bat1.foeMagic.setName("Blood suck");
+			bat1.foeMagic.setName("Fire breath");
 			bat1.foeMagic.setDamages(20);
 			
 			hero.fight(bat1);

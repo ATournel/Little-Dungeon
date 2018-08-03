@@ -19,17 +19,17 @@ public class Character {
 			int manaPotionNb;
 			
 			
-			public int getHealthPotion() {
+			public int getHealthPotionNb() {
 				return healthPotionNb;
 			}
-			public void setHealthPotion(int healthPotion) {
-				this.healthPotionNb = healthPotion;
+			public void setHealthPotionNb(int healthPotionNb) {
+				this.healthPotionNb = healthPotionNb;
 			}
-			public int getManaPotion() {
+			public int getManaPotionNb() {
 				return manaPotionNb;
 			}
-			public void setManaPotion(int manaPotion) {
-				this.manaPotionNb = manaPotion;
+			public void setManaPotionNb(int manaPotionNb) {
+				this.manaPotionNb = manaPotionNb;
 			}
 			public int getDamages() {
 				return damages;
@@ -111,14 +111,15 @@ public class Character {
 			static Armor heroArmor = new Armor();
 			static Armor heroShield = new Armor();
 			
-			
+						
 			public void fight(Foe ennemi) throws InterruptedException {
 				System.out.println("You face a "+ennemi.getName());
 				boolean flea = false;
 				while(flea==false && ennemi.getLife()>0 && getLife()>0){
-					System.out.println("\n\nYour turn:\n1-Attack\n2-Magic\n3-Item\n4-Run");
+					System.out.println("\nYour turn:\n**********\nLife: "+getLife()+"\nMana: "+getMana()+"\n**********\n1-Attack\n2-Magic\n3-Item\n4-Run");
 					int x = scan.nextInt();
 					if(x==1) {
+						System.out.println("\n");
 						System.out.println("You try to land a blow to "+ennemi.getName()+" with your "+heroWeapon.getName()+"!");
 						Thread.sleep(1500);
 						int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
@@ -139,150 +140,204 @@ public class Character {
 						}
 					}
 					else if(x==2) {
-						
+						System.out.println("\n");
 						System.out.println("1-"+fireMagic.getName()+" - "+fireMagic.getManaCons()+" MP                2-"+waterMagic.getName()+" - "+waterMagic.getManaCons()+" MP\n3-"+airMagic.getName()+" - "+airMagic.getManaCons()+"MP          4-"+earthMagic.getName()+" - "+earthMagic.getManaCons()+" MP\n5-"+healingMagic.getName()+" - "+healingMagic.getManaCons());
 						int z = scan.nextInt();
-						if(z==1) {
-							System.out.println("You cast a "+fireMagic.getName()+" at "+ennemi.getName()+"!");
-							Thread.sleep(1500);
-							setMana(getMana()-fireMagic.getManaCons());
-							if(ennemi.getType().equals("fire")) {
-								System.out.println("Your "+fireMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
-								System.out.println(ennemi.getName()+" heals "+(fireMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
-								ennemi.setLife(ennemi.getLife()+(fireMagic.getDamages()-ennemi.getMagicArmor()));
+						if(getMana()>0) {
+							if(z==1) {
+								if(getMana()>=fireMagic.getManaCons()) {
+									System.out.println("\n");
+									System.out.println("You cast a "+fireMagic.getName()+" at "+ennemi.getName()+"!");
+									Thread.sleep(1500);
+									setMana(getMana()-fireMagic.getManaCons());
+									if(ennemi.getType().equals("fire")) {
+										System.out.println("Your "+fireMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
+										System.out.println(ennemi.getName()+" heals "+(fireMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
+										ennemi.setLife(ennemi.getLife()+(fireMagic.getDamages()-ennemi.getMagicArmor()));
+									}
+									else if(ennemi.getType().equals("water")){
+										System.out.println(ennemi.getName()+" resists your "+fireMagic.getName()+" taking only half damages!");
+										System.out.println(ennemi.getName()+" takes "+(fireMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(fireMagic.getDamages()/2-ennemi.getMagicArmor()));
+									}
+									else if(ennemi.getType().equals("earth")){
+										System.out.println(ennemi.getName()+" gets badly hurt by your "+fireMagic.getName()+", taking double damages!");
+										System.out.println(ennemi.getName()+" takes "+(fireMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(fireMagic.getDamages()*2)-ennemi.getMagicArmor());
+									}
+									else {
+										System.out.println(ennemi.getName()+" gets hit by your "+fireMagic.getName()+", taking "+(fireMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
+										ennemi.setLife(ennemi.getLife()-(fireMagic.getDamages()-ennemi.getMagicArmor()));
+									}
+								}
+								else {
+									System.out.println("You use whatever mana you had left and a small ridiculous flame spouts out of your hand..");
+									setMana(0);
+								}
+								Thread.sleep(1500);
 							}
-							else if(ennemi.getType().equals("water")){
-								System.out.println(ennemi.getName()+" resists your "+fireMagic.getName()+" taking only half damages!");
-								System.out.println(ennemi.getName()+" takes "+(fireMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(fireMagic.getDamages()/2-ennemi.getMagicArmor()));
+							else if(z==2) {
+								if(getMana()>=waterMagic.getManaCons()) {
+									System.out.println("\n");
+									System.out.println("You cast a "+waterMagic.getName()+" at "+ennemi.getName()+"!");
+									Thread.sleep(1500);
+									setMana(getMana()-waterMagic.getManaCons());
+									if(ennemi.getType().equals("water")) {
+										System.out.println("Your "+waterMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
+										System.out.println(ennemi.getName()+" heals "+(waterMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
+										ennemi.setLife(ennemi.getLife()+(waterMagic.getDamages()-ennemi.getMagicArmor()));
+									}
+									else if(ennemi.getType().equals("air")){
+										System.out.println(ennemi.getName()+" resists your "+waterMagic.getName()+" taking only half damages!");
+										System.out.println(ennemi.getName()+" takes "+(waterMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(waterMagic.getDamages()/2-ennemi.getMagicArmor()));
+									}
+									else if(ennemi.getType().equals("fire")){
+										System.out.println(ennemi.getName()+" gets badly hurt by your "+waterMagic.getName()+", taking double damages!");
+										System.out.println(ennemi.getName()+" takes "+(waterMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(waterMagic.getDamages()*2-ennemi.getMagicArmor()));
+									}
+									else {
+										System.out.println(ennemi.getName()+" gets hit by your "+waterMagic.getName()+", taking "+(waterMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
+										ennemi.setLife(ennemi.getLife()-(waterMagic.getDamages()-ennemi.getMagicArmor()));
+									}
+								}
+								else {
+									System.out.println("You use whatever mana you had left and a small ridiculous drop of water spouts out of your hand..");
+									setMana(0);
+								}
+								Thread.sleep(1500);
 							}
-							else if(ennemi.getType().equals("earth")){
-								System.out.println(ennemi.getName()+" gets badly hurt by your "+fireMagic.getName()+", taking double damages!");
-								System.out.println(ennemi.getName()+" takes "+(fireMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(fireMagic.getDamages()*2)-ennemi.getMagicArmor());
+							else if(z==3) {
+								if(getMana()>=airMagic.getManaCons()) {
+									System.out.println("\n");
+									System.out.println("You cast a "+airMagic.getName()+" at "+ennemi.getName()+"!");
+									Thread.sleep(1500);
+									setMana(getMana()-airMagic.getManaCons());
+									if(ennemi.getType().equals("air")) {
+										System.out.println("Your "+airMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
+										System.out.println(ennemi.getName()+" heals "+(airMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
+										ennemi.setLife(ennemi.getLife()+(airMagic.getDamages()-ennemi.getMagicArmor()));
+										
+									}
+									else if(ennemi.getType().equals("earth")){
+										System.out.println(ennemi.getName()+" resists your "+airMagic.getName()+" taking only half damages!");
+										System.out.println(ennemi.getName()+" takes "+(airMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(airMagic.getDamages()/2-ennemi.getMagicArmor()));
+									}
+									else if(ennemi.getType().equals("water")){
+										System.out.println(ennemi.getName()+" gets badly hurt by your "+airMagic.getName()+", taking double damages!");
+										System.out.println(ennemi.getName()+" takes "+(airMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(airMagic.getDamages()*2-ennemi.getMagicArmor()));
+									}
+									else {
+										System.out.println(ennemi.getName()+" gets hit by your "+airMagic.getName()+", taking "+(airMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
+										ennemi.setLife(ennemi.getLife()-(airMagic.getDamages()-ennemi.getMagicArmor()));
+									}
+								}
+								else {
+									System.out.println("You use whatever mana you had left and a small ridiculous light ball spouts out of your hand..");
+									setMana(0);
+								}
+								Thread.sleep(1500);
 							}
-							else {
-								System.out.println(ennemi.getName()+" gets hit by your "+fireMagic.getName()+", taking "+(fireMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
-								ennemi.setLife(ennemi.getLife()-(fireMagic.getDamages()-ennemi.getMagicArmor()));
+							else if(z==4) {
+								if(getMana()>=earthMagic.getManaCons()) {
+									System.out.println("\n");
+									System.out.println("You cast a "+earthMagic.getName()+" at "+ennemi.getName()+"!");
+									Thread.sleep(1500);
+									setMana(getMana()-earthMagic.getManaCons());
+									if(ennemi.getType().equals("earth")) {
+										System.out.println("Your "+earthMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
+										System.out.println(ennemi.getName()+" heals "+(earthMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
+										ennemi.setLife(ennemi.getLife()+(earthMagic.getDamages()-ennemi.getMagicArmor()));
+										
+									}
+									else if(ennemi.getType().equals("fire")){
+										System.out.println(ennemi.getName()+" resists your "+earthMagic.getName()+" taking only half damages!");
+										System.out.println(ennemi.getName()+" takes "+(earthMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(earthMagic.getDamages()/2-ennemi.getMagicArmor()));
+									}
+									else if(ennemi.getType().equals("air")){
+										System.out.println(ennemi.getName()+" gets badly hurt by your "+earthMagic.getName()+", taking double damages!");
+										System.out.println(ennemi.getName()+" takes "+(earthMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
+										ennemi.setLife(ennemi.getLife()-(earthMagic.getDamages()*2-ennemi.getMagicArmor()));
+									}
+									else {
+										System.out.println(ennemi.getName()+" gets hit by your "+earthMagic.getName()+", taking "+(earthMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
+										ennemi.setLife(ennemi.getLife()-(earthMagic.getDamages()-ennemi.getMagicArmor()));
+									}
+								}
+								else {
+									System.out.println("You use whatever mana you had left and a small ridiculous stone spouts out of your hand..");
+									setMana(0);
+								}
+								Thread.sleep(1500);
 							}
-							Thread.sleep(1500);
+							else if(z==5) {
+								System.out.println("\n");
+								System.out.println("You cast "+healingMagic.getName()+", healing "+healingMagic.getDamages()+" HP!");
+								setMana(getMana()-healingMagic.getManaCons());
+								setLife(getLife()+healingMagic.getDamages());
+								if(getLife()>3000) {
+									setLife(3000);
+								}
+								System.out.println("You get healed up to "+getLife()+" HP.");
+								Thread.sleep(1500);
+							}
+							
+							}
+						else {
+							System.out.println("You don't have any mana left!");
 						}
-						else if(z==2) {
-							System.out.println("You cast a "+waterMagic.getName()+" at "+ennemi.getName()+"!");
-							Thread.sleep(1500);
-							setMana(getMana()-waterMagic.getManaCons());
-							if(ennemi.getType().equals("water")) {
-								System.out.println("Your "+waterMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
-								System.out.println(ennemi.getName()+" heals "+(waterMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
-								ennemi.setLife(ennemi.getLife()+(waterMagic.getDamages()-ennemi.getMagicArmor()));
-							}
-							else if(ennemi.getType().equals("air")){
-								System.out.println(ennemi.getName()+" resists your "+waterMagic.getName()+" taking only half damages!");
-								System.out.println(ennemi.getName()+" takes "+(waterMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(waterMagic.getDamages()/2-ennemi.getMagicArmor()));
-							}
-							else if(ennemi.getType().equals("fire")){
-								System.out.println(ennemi.getName()+" gets badly hurt by your "+waterMagic.getName()+", taking double damages!");
-								System.out.println(ennemi.getName()+" takes "+(waterMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(waterMagic.getDamages()*2-ennemi.getMagicArmor()));
-							}
-							else {
-								System.out.println(ennemi.getName()+" gets hit by your "+waterMagic.getName()+", taking "+(waterMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
-								ennemi.setLife(ennemi.getLife()-(waterMagic.getDamages()-ennemi.getMagicArmor()));
-							}
-							Thread.sleep(1500);
-						}
-						else if(z==3) {
-							System.out.println("You cast a "+airMagic.getName()+" at "+ennemi.getName()+"!");
-							Thread.sleep(1500);
-							setMana(getMana()-airMagic.getManaCons());
-							if(ennemi.getType().equals("air")) {
-								System.out.println("Your "+airMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
-								System.out.println(ennemi.getName()+" heals "+(airMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
-								ennemi.setLife(ennemi.getLife()+(airMagic.getDamages()-ennemi.getMagicArmor()));
-								
-							}
-							else if(ennemi.getType().equals("earth")){
-								System.out.println(ennemi.getName()+" resists your "+airMagic.getName()+" taking only half damages!");
-								System.out.println(ennemi.getName()+" takes "+(airMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(airMagic.getDamages()/2-ennemi.getMagicArmor()));
-							}
-							else if(ennemi.getType().equals("water")){
-								System.out.println(ennemi.getName()+" gets badly hurt by your "+airMagic.getName()+", taking double damages!");
-								System.out.println(ennemi.getName()+" takes "+(airMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(airMagic.getDamages()*2-ennemi.getMagicArmor()));
-							}
-							else {
-								System.out.println(ennemi.getName()+" gets hit by your "+airMagic.getName()+", taking "+(airMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
-								ennemi.setLife(ennemi.getLife()-(airMagic.getDamages()-ennemi.getMagicArmor()));
-							}
-							Thread.sleep(1500);
-						}
-						else if(z==4) {
-							System.out.println("You cast a "+earthMagic.getName()+" at "+ennemi.getName()+"!");
-							Thread.sleep(1500);
-							setMana(getMana()-earthMagic.getManaCons());
-							if(ennemi.getType().equals("earth")) {
-								System.out.println("Your "+earthMagic.getName()+" gets absorb by "+ennemi.getName()+", making him stronger!");
-								System.out.println(ennemi.getName()+" heals "+(earthMagic.getDamages()-ennemi.getMagicArmor())+" HP!");
-								ennemi.setLife(ennemi.getLife()+(earthMagic.getDamages()-ennemi.getMagicArmor()));
-								
-							}
-							else if(ennemi.getType().equals("fire")){
-								System.out.println(ennemi.getName()+" resists your "+earthMagic.getName()+" taking only half damages!");
-								System.out.println(ennemi.getName()+" takes "+(earthMagic.getDamages()/2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(earthMagic.getDamages()/2-ennemi.getMagicArmor()));
-							}
-							else if(ennemi.getType().equals("air")){
-								System.out.println(ennemi.getName()+" gets badly hurt by your "+earthMagic.getName()+", taking double damages!");
-								System.out.println(ennemi.getName()+" takes "+(earthMagic.getDamages()*2-ennemi.getMagicArmor())+" damages.");
-								ennemi.setLife(ennemi.getLife()-(earthMagic.getDamages()*2-ennemi.getMagicArmor()));
-							}
-							else {
-								System.out.println(ennemi.getName()+" gets hit by your "+earthMagic.getName()+", taking "+(earthMagic.getDamages()-ennemi.getMagicArmor())+" damages!");								
-								ennemi.setLife(ennemi.getLife()-(earthMagic.getDamages()-ennemi.getMagicArmor()));
-							}
-							Thread.sleep(1500);
-						}
-						else if(z==5) {
-							System.out.println("You cast "+healingMagic.getName()+", healing "+healingMagic.getDamages()+" HP!");
-							setMana(getMana()-healingMagic.getManaCons());
-							setLife(getLife()+healingMagic.getDamages());
-							if(getLife()>3000) {
-								setLife(3000);
-							}
-							System.out.println("You get healed up to "+getLife()+" HP.");
-							Thread.sleep(1500);
-						}
-						System.out.println("You have "+getMana()+" MP.");
 											
 						
 					}
 					else if(x==3) {
-						System.out.println("1-"+healingPotion.getName()+"\n2-"+manaPotion.getName());
+						System.out.println("\n");
+						System.out.println("1-"+healingPotion.getName()+" - "+getHealthPotionNb()+"\n2-"+manaPotion.getName()+" - "+getManaPotionNb());
 						int z = scan.nextInt();
 						if(z==1) {
-							System.out.println("You drink a "+healingPotion.getName()+" recovering "+healingPotion.getHealing()+" HP!");
-							setLife(getLife()+healingPotion.getHealing());
-							if(getLife()>3000) {
-								setLife(3000);
+							System.out.println("\n");
+							if(getHealthPotionNb()>0) {
+								System.out.println("You drink a "+healingPotion.getName()+" recovering "+healingPotion.getHealing()+" HP!");
+								setLife(getLife()+healingPotion.getHealing());
+								setHealthPotionNb(getHealthPotionNb()-1);
+								if(getLife()>3000) {
+									setLife(3000);
+								}
+								System.out.println("You get healed up to "+getLife()+" HP.");
+								System.out.println(getHealthPotionNb()+" health potion(s) left.");
 							}
-							System.out.println("You get healed up to "+getLife()+" HP.");
+							else {
+								System.out.println("You don't have any health potion!");
+							}
 						}
 						else if(z==2) {
-							System.out.println("You drink a "+manaPotion.getName()+" recovering "+manaPotion.getHealing()+" MP!");
-							setMana(getMana()+manaPotion.getHealing());
-							if(getMana()>300) {
-								setMana(300);
+							System.out.println("\n");
+							if(getManaPotionNb()>0) {
+								System.out.println("You drink a "+manaPotion.getName()+" recovering "+manaPotion.getHealing()+" MP!");
+								setMana(getMana()+manaPotion.getHealing());
+								setManaPotionNb(getManaPotionNb()-1);
+								if(getMana()>300) {
+									setMana(300);
+								}
+								System.out.println("You restore mana up to "+getMana()+" HP.");
+								System.out.println(getManaPotionNb()+" mana potion(s) left.");
 							}
-							System.out.println("You restore mana up to "+getMana()+" HP.");
+							else {
+								System.out.println("You don't have any mana potion!");
+							}
 						}
+						
 						
 					}
 					else {
+						System.out.println("\n");
 						System.out.println("You try to run away!");
 						Thread.sleep(1500);
 						int y = (int) Math.floor(Math.random() * 101)+ennemi.getDext();
+						System.out.println("\n");
 						if(y<50) {
 							System.out.println("You run away from the fight!");
 							flea=true;
@@ -293,18 +348,20 @@ public class Character {
 					}
 					Thread.sleep(1500);
 					if(ennemi.getLife()>0) {
-					
+						System.out.println("\n");
 						System.out.println(ennemi.getName()+" attacks!");
 						int z = (int) Math.floor(Math.random() * 11);
 						Thread.sleep(1500);
 						
 						if(z<=4) {
+							System.out.println("\n");
 							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic.getName()+"!");
-							System.out.println("You get hit for "+(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())+"!");
+							System.out.println("You get hit for "+(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())+" damages!");
 							setLife(getLife()-(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor()));
 							System.out.println("You have "+getLife()+" health points.");
 						}
 						else {
+							System.out.println("\n");
 							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
 							if(y>50) {
 								System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor()-getShieldArmor())+" damages!");
@@ -327,12 +384,17 @@ public class Character {
 					if(y<=2) {
 						System.out.println("You found a small key! keep it safe.");
 						setNbOfKeys(getNbOfKeys()+1);
+						System.out.println("You now have "+getNbOfKeys()+" key(s).");
 					}
 					else if(y<=5) {
 						System.out.println("You found a health potion.");
+						setHealthPotionNb(getHealthPotionNb()+1);
+						System.out.println("You now have "+getHealthPotionNb()+" health potion(s).");
 					}
 					else if(y<=8) {
 						System.out.println("You found a mana potion.");
+						setManaPotionNb(getManaPotionNb()+1);
+						System.out.println("You now have "+getManaPotionNb()+" mana potion(s).");
 					}
 					else {
 						System.out.println("You found nothing..");
