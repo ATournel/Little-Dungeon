@@ -10,8 +10,8 @@ public class Game {
 		hero.setLife(1);
 		
 		
-		text1.printTitle();
-		text1.printIntro();
+		//text1.printTitle();
+		//text1.printIntro();
 		
 		String x = scan.nextLine();
 		while(x.equals("y") && hero.getLife()>0) {
@@ -34,8 +34,9 @@ public class Game {
 			hero.setIntell(scan2.nextInt()+10);
 			hero.setLife(hero.getStrength()*100);
 			hero.setMana(hero.getIntell()*10);
-			hero.setArmor(hero.getStrength()-10);
-			hero.setMagicArmor(hero.getDext()-10);
+			hero.setArmor((hero.getStrength()-10)+Character.heroArmor.getArmor()+Character.heroShield.getArmor());
+			hero.setMagicArmor((hero.getDext()-10)+Character.heroArmor.getMagicArmor()+Character.heroShield.getMagicArmor());
+			hero.setDamages(hero.getStrength()+Character.heroWeapon.getDamage());
 			System.out.println("\n\n\nHere are your stats:\n");
 			System.out.println("Name: "+hero.getName());
 			System.out.println("\nStrength: "+hero.getStrength());
@@ -48,6 +49,43 @@ public class Game {
 			System.out.println("\n\nDo you want to keep this character?\nType 'y' or 'n':");
 			s = scan.nextLine();
 			}while(s.equals("n"));
+			
+			Character.heroWeapon.setName("short family sword");
+			Character.heroWeapon.setDamage(20);
+			
+			Character.heroArmor.setName("");
+			Character.heroArmor.setArmor(5);
+			Character.heroArmor.setMagicArmor(2);
+			
+			Character.heroShield.setName("small family shield");
+			Character.heroShield.setArmor(3);
+			Character.heroShield.setMagicArmor(1);
+			
+			Character.fireMagic.setName("Fire ball");
+			Character.fireMagic.setDamages(50+hero.getIntell());
+			Character.fireMagic.setManaCons(20);
+			
+			Character.waterMagic.setName("Water beam");
+			Character.waterMagic.setDamages(50+hero.getIntell());
+			Character.waterMagic.setManaCons(20);
+			
+			Character.airMagic.setName("Ligthning strike");
+			Character.airMagic.setDamages(50+hero.getIntell());
+			Character.airMagic.setManaCons(20);
+			
+			Character.earthMagic.setName("Boulder throw");
+			Character.earthMagic.setDamages(50+hero.getIntell());
+			Character.earthMagic.setManaCons(20);
+			
+			Character.healingMagic.setName("Small Heal");
+			Character.healingMagic.setDamages(200+hero.getIntell());
+			Character.healingMagic.setManaCons(20);
+			
+			Character.healingPotion.setName("small healing potion");
+			Character.healingPotion.setHealing(200);
+			Character.manaPotion.setName("small mana potion");
+			Character.healingPotion.setHealing(20);
+			
 		
 			Foe bat1 = new Foe();
 			bat1.setName("Scary Vampire");
@@ -55,6 +93,7 @@ public class Game {
 			bat1.setStrength(500);
 			bat1.setDext(500);
 			bat1.setLife(500);
+			bat1.setType("fire");
 			
 			hero.fight(bat1);
 			
