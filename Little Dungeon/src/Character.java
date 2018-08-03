@@ -116,10 +116,10 @@ public class Character {
 				System.out.println("You face a "+ennemi.getName());
 				boolean flea = false;
 				while(flea==false && ennemi.getLife()>0 && getLife()>0){
-					System.out.println("Your turn:\n1-Attack\n2-Magic\n3-Item\n4-Run");
+					System.out.println("\n\nYour turn:\n1-Attack\n2-Magic\n3-Item\n4-Run");
 					int x = scan.nextInt();
 					if(x==1) {
-						System.out.println("You try to land a blow to "+ennemi.getName()+" with your weapon!");
+						System.out.println("You try to land a blow to "+ennemi.getName()+" with your "+heroWeapon.getName()+"!");
 						Thread.sleep(1500);
 						int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
 						if(y<70) {
@@ -129,8 +129,10 @@ public class Character {
 								System.out.println("You land a hit of "+(z+getDamages()-ennemi.getArmor()-ennemi.getShieldArmor())+" damages!");
 								ennemi.setLife(ennemi.getLife()-(getDamages()-ennemi.getArmor()-ennemi.getShieldArmor()));
 							}
-						System.out.println("You land a hit of "+(z+getDamages()-ennemi.getArmor()-ennemi.getShieldArmor())+" damages!");
-						ennemi.setLife(ennemi.getLife()-(z+getDamages()-ennemi.getArmor()-ennemi.getShieldArmor()));
+							else {
+								System.out.println("You land a hit of "+(z+getDamages()-ennemi.getArmor()-ennemi.getShieldArmor())+" damages!");
+								ennemi.setLife(ennemi.getLife()-(z+getDamages()-ennemi.getArmor()-ennemi.getShieldArmor()));
+							}
 						}
 						else {
 							System.out.println("You missed!");
@@ -138,7 +140,7 @@ public class Character {
 					}
 					else if(x==2) {
 						
-						System.out.println("1-"+fireMagic.getName()+"                2-"+waterMagic.getName()+"\n3-"+airMagic.getName()+"          4-"+earthMagic.getName()+"\n5-"+healingMagic.getName());
+						System.out.println("1-"+fireMagic.getName()+" - "+fireMagic.getManaCons()+" MP                2-"+waterMagic.getName()+" - "+waterMagic.getManaCons()+" MP\n3-"+airMagic.getName()+" - "+airMagic.getManaCons()+"MP          4-"+earthMagic.getName()+" - "+earthMagic.getManaCons()+" MP\n5-"+healingMagic.getName()+" - "+healingMagic.getManaCons());
 						int z = scan.nextInt();
 						if(z==1) {
 							System.out.println("You cast a "+fireMagic.getName()+" at "+ennemi.getName()+"!");
@@ -249,8 +251,10 @@ public class Character {
 							if(getLife()>3000) {
 								setLife(3000);
 							}
+							System.out.println("You get healed up to "+getLife()+" HP.");
 							Thread.sleep(1500);
 						}
+						System.out.println("You have "+getMana()+" MP.");
 											
 						
 					}
@@ -263,6 +267,7 @@ public class Character {
 							if(getLife()>3000) {
 								setLife(3000);
 							}
+							System.out.println("You get healed up to "+getLife()+" HP.");
 						}
 						else if(z==2) {
 							System.out.println("You drink a "+manaPotion.getName()+" recovering "+manaPotion.getHealing()+" MP!");
@@ -270,6 +275,7 @@ public class Character {
 							if(getMana()>300) {
 								setMana(300);
 							}
+							System.out.println("You restore mana up to "+getMana()+" HP.");
 						}
 						
 					}
@@ -296,10 +302,10 @@ public class Character {
 							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic.getName()+"!");
 							System.out.println("You get hit for "+(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())+"!");
 							setLife(getLife()-(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor()));
+							System.out.println("You have "+getLife()+" health points.");
 						}
 						else {
 							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
-							Thread.sleep(1500);
 							if(y>50) {
 								System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor()-getShieldArmor())+" damages!");
 								setLife(getLife()-(ennemi.getStrength()-getArmor()-getShieldArmor()));

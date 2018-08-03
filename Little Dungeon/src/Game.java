@@ -57,6 +57,7 @@ public class Game {
 			System.out.println("\nMana: "+hero.getMana());
 			System.out.println("\nArmor: "+hero.getArmor());
 			System.out.println("\nMagic armor: "+hero.getMagicArmor());
+			System.out.println("You will start your adventure with your "+Character.heroWeapon.getName()+", your " +Character.heroArmor.getName()+", your "+Character.heroShield.getName()+" and a few basic magics.");
 			System.out.println("\n\nDo you want to keep this character?\nType 'y' or 'n':");
 			s = scan.nextLine();
 			}while(s.equals("n"));
@@ -85,15 +86,15 @@ public class Game {
 			Character.healingPotion.setName("small healing potion");
 			Character.healingPotion.setHealing(200);
 			Character.manaPotion.setName("small mana potion");
-			Character.healingPotion.setHealing(20);
+			Character.manaPotion.setHealing(20);
 			
 		
 			Foe bat1 = new Foe();
 			bat1.setName("Scary Vampire");
-			bat1.setArmor(15);
-			bat1.setStrength(500);
-			bat1.setDext(500);
-			bat1.setIntell(500);
+			bat1.setArmor(10);
+			bat1.setStrength(15);
+			bat1.setDext(15);
+			bat1.setIntell(15);
 			bat1.setLife(500);
 			bat1.setType("fire");
 			bat1.foeMagic.setName("Blood suck");
