@@ -122,7 +122,7 @@ public class Character {
 						System.out.println("You try to land a blow to "+ennemi.getName()+" with your weapon!");
 						Thread.sleep(1500);
 						int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
-						if(y<60) {
+						if(y<70) {
 							int z=(int) Math.floor(Math.random() * 51);
 							if(z>40) {
 								System.out.println("Critical hit!");
@@ -289,15 +289,25 @@ public class Character {
 					if(ennemi.getLife()>0) {
 					
 						System.out.println(ennemi.getName()+" attacks!");
-						int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
+						int z = (int) Math.floor(Math.random() * 11);
 						Thread.sleep(1500);
-						if(y>50) {
-							System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor()-getShieldArmor())+" damages!");
-							setLife(getLife()-(ennemi.getStrength()-getArmor()-getShieldArmor()));
-							System.out.println("You have "+getLife()+" health points.");
+						
+						if(z<=4) {
+							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic.getName()+"!");
+							System.out.println("You get hit for "+(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())+"!");
+							setLife(getLife()-(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor()));
 						}
 						else {
-							System.out.println(ennemi.getName()+" attack missed!");
+							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
+							Thread.sleep(1500);
+							if(y>50) {
+								System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor()-getShieldArmor())+" damages!");
+								setLife(getLife()-(ennemi.getStrength()-getArmor()-getShieldArmor()));
+								System.out.println("You have "+getLife()+" health points.");
+							}
+							else {
+								System.out.println(ennemi.getName()+" attack missed!");
+							}
 						}
 					}
 					Thread.sleep(1500);

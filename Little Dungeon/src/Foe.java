@@ -11,4 +11,6 @@ public class Foe extends Character {
 		this.type = type;
 	}
 	
+	Magic foeMagic = new Magic();
+	
 }

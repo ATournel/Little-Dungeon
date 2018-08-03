@@ -25,6 +25,17 @@ public class Game {
 			System.out.println("What will be your name?");
 			hero.setName(scan.nextLine());
 			
+			Character.heroWeapon.setName("short family sword");
+			Character.heroWeapon.setDamage(20);
+			
+			Character.heroArmor.setName("leather family armor");
+			Character.heroArmor.setArmor(5);
+			Character.heroArmor.setMagicArmor(2);
+			
+			Character.heroShield.setName("small family shield");
+			Character.heroShield.setArmor(3);
+			Character.heroShield.setMagicArmor(1);
+			
 			System.out.println("Distribute your points:");
 			System.out.print("Strength: ");
 			hero.setStrength(scan2.nextInt()+10);
@@ -49,17 +60,7 @@ public class Game {
 			System.out.println("\n\nDo you want to keep this character?\nType 'y' or 'n':");
 			s = scan.nextLine();
 			}while(s.equals("n"));
-			
-			Character.heroWeapon.setName("short family sword");
-			Character.heroWeapon.setDamage(20);
-			
-			Character.heroArmor.setName("");
-			Character.heroArmor.setArmor(5);
-			Character.heroArmor.setMagicArmor(2);
-			
-			Character.heroShield.setName("small family shield");
-			Character.heroShield.setArmor(3);
-			Character.heroShield.setMagicArmor(1);
+						
 			
 			Character.fireMagic.setName("Fire ball");
 			Character.fireMagic.setDamages(50+hero.getIntell());
@@ -92,8 +93,11 @@ public class Game {
 			bat1.setArmor(15);
 			bat1.setStrength(500);
 			bat1.setDext(500);
+			bat1.setIntell(500);
 			bat1.setLife(500);
 			bat1.setType("fire");
+			bat1.foeMagic.setName("Blood suck");
+			bat1.foeMagic.setDamages(20);
 			
 			hero.fight(bat1);
 			
