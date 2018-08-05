@@ -113,7 +113,7 @@ public class Character {
 			
 						
 			public void fight(Foe ennemi) throws InterruptedException {
-				System.out.println("You face a "+ennemi.getName());
+				System.out.println("\nYou face a "+ennemi.getName());
 				boolean flea = false;
 				while(flea==false && ennemi.getLife()>0 && getLife()>0){
 					System.out.println("\nYour turn:\n**********\nLife: "+getLife()+"\nMana: "+getMana()+"\n**********\n1-Attack\n2-Magic\n3-Item\n4-Run");
@@ -306,7 +306,7 @@ public class Character {
 								if(getLife()>3000) {
 									setLife(3000);
 								}
-								System.out.println("You get healed up to "+getLife()+" HP.");
+								System.out.println("You get healed up to "+getLife()+"HP.");
 								System.out.println(getHealthPotionNb()+" health potion(s) left.");
 							}
 							else {
@@ -322,7 +322,7 @@ public class Character {
 								if(getMana()>300) {
 									setMana(300);
 								}
-								System.out.println("You restore mana up to "+getMana()+" HP.");
+								System.out.println("You restore mana up to "+getMana()+"MP.");
 								System.out.println(getManaPotionNb()+" mana potion(s) left.");
 							}
 							else {
@@ -356,17 +356,25 @@ public class Character {
 						if(z<=4) {
 							System.out.println("\n");
 							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic.getName()+"!");
+							if((ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())<=0) {
+								System.out.println("You heroically parry his magic and take no damages!");
+							}
+							else {
 							System.out.println("You get hit for "+(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())+" damages!");
 							setLife(getLife()-(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor()));
-							System.out.println("You have "+getLife()+" health points.");
+							}
 						}
 						else {
 							System.out.println("\n");
 							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
-							if(y>50) {
-								System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor()-getShieldArmor())+" damages!");
-								setLife(getLife()-(ennemi.getStrength()-getArmor()-getShieldArmor()));
-								System.out.println("You have "+getLife()+" health points.");
+							if(y<70) {
+								if((ennemi.getStrength()-getArmor())<=0) {
+									System.out.println("You heroically parry the blow and take no damages!");
+								}
+								else {
+									System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor())+" damages!");
+									setLife(getLife()-(ennemi.getStrength()-getArmor()));
+								}
 							}
 							else {
 								System.out.println(ennemi.getName()+" attack missed!");
@@ -380,7 +388,9 @@ public class Character {
 				}
 				else if(ennemi.getLife()<=0) {
 					System.out.println("You killed "+ennemi.getName()+"!");
+					Thread.sleep(1700);
 					int y = (int) Math.floor(Math.random() * 11);
+					System.out.println("\n");
 					if(y<=2) {
 						System.out.println("You found a small key! keep it safe.");
 						setNbOfKeys(getNbOfKeys()+1);
@@ -399,6 +409,7 @@ public class Character {
 					else {
 						System.out.println("You found nothing..");
 					}
+					Thread.sleep(1700);
 				}
 				else if(getLife()<=0){
 					System.out.println("You died...");
