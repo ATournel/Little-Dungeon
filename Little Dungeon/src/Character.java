@@ -366,7 +366,7 @@ public class Character {
 						}
 						else {
 							System.out.println("\n");
-							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
+							int y = (int) Math.floor(Math.random() * 101)-(ennemi.getDext()-getDext());
 							if(y<70) {
 								if((ennemi.getStrength()-getArmor())<=0) {
 									System.out.println("You heroically parry the blow with your "+heroShield.getName()+" and take no damages!");
@@ -649,7 +649,7 @@ public class Character {
 					if(ennemi.getLife()>0) {
 						System.out.println("\n");
 						System.out.println(ennemi.getName()+" attacks!");
-						int z = (int) Math.floor(Math.random() * 20);
+						int z = (int) Math.floor(Math.random() * 30);
 						Thread.sleep(1500);
 						
 						if(z<=2) {
@@ -663,7 +663,7 @@ public class Character {
 							setLife(getLife()-(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor()));
 							}
 						}
-						else if(z<=6) {
+						else if(z<=7) {
 							System.out.println("\n");
 							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic2.getName()+"!");
 							if((ennemi.foeMagic2.getDamages()+ennemi.getIntell()-getMagicArmor())<=0) {
@@ -674,7 +674,7 @@ public class Character {
 							setLife(getLife()-(ennemi.foeMagic2.getDamages()+ennemi.getIntell()-getMagicArmor()));
 							}
 						}
-						else if(z<=10) {
+						else if(z<=14) {
 							System.out.println("\n");
 							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic3.getName()+"!");
 							if((ennemi.foeMagic3.getDamages()+ennemi.getIntell()-getMagicArmor())<=0) {
@@ -687,14 +687,15 @@ public class Character {
 						}
 						else {
 							System.out.println("\n");
-							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
+							int y = (int) Math.floor(Math.random() * 101)-(ennemi.getDext()-getDext());
 							if(y<70) {
-								if((ennemi.getStrength()-getArmor())<=0) {
+								int w=(int) Math.floor(Math.random() * 51);
+								if(w+(ennemi.getStrength()-getArmor())<=0) {
 									System.out.println("You heroically parry the blow with your "+heroShield.getName()+" and take no damages!");
 								}
 								else {
-									System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor())+" damages!");
-									setLife(getLife()-(ennemi.getStrength()-getArmor()));
+									System.out.println("He lands a hit of "+(w+(ennemi.getStrength()-getArmor()))+" damages!");
+									setLife(getLife()-(w+(ennemi.getStrength()-getArmor())));
 								}
 							}
 							else {

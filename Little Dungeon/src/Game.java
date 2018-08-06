@@ -87,10 +87,10 @@ public class Game {
 			Character.healingMagic.setDamages(200+hero.getIntell());
 			Character.healingMagic.setManaCons(20);
 			
-			Character.healingPotion.setName("small healing potion");
+			Character.healingPotion.setName("healing potion");
 			Character.healingPotion.setHealing(200);
-			Character.manaPotion.setName("small mana potion");
-			Character.manaPotion.setHealing(20);
+			Character.manaPotion.setName("mana potion");
+			Character.manaPotion.setHealing(60);
 			
 			Foe ennemi = new Foe();
 			Foe ennemi2 = new Foe();
@@ -210,14 +210,27 @@ public class Game {
 					}
 					
 				}
-			}
+			}		
 		
 	//First boss text
 			
 	//First boss fight
 			Foe boss1 = new Foe();
+			boss1.setName("Lady Pestilence");
+			boss1.setArmor(20);
+			boss1.setStrength(20);
+			boss1.setDext(20);
+			boss1.setIntell(20);
+			boss1.setLife((boss1.getStrength()-10)*100);
+			boss1.setType("earth");
+			boss1.foeMagic.setName("Plague Breath");
+			boss1.foeMagic.setDamages(80);
+			boss1.foeMagic2.setName("Decaying Touch");
+			boss1.foeMagic2.setDamages(60);
+			boss1.foeMagic3.setName("Smell of Diseases");
+			boss1.foeMagic3.setDamages(40);
 			hero.bossFight(boss1);
-	//First boss chest
+	//First boss chest and fight end text
 			
 	//Second round of rooms
 			
@@ -333,7 +346,23 @@ public class Game {
 			
 	//Second boss fight
 			
-	//Second boss chest
+			Foe boss2 = new Foe();
+			boss2.setName("Lord Sorrow");
+			boss2.setArmor(25);
+			boss2.setStrength(25);
+			boss2.setDext(25);
+			boss2.setIntell(25);
+			boss2.setLife((boss2.getStrength()-10)*100);
+			boss2.setType("water");
+			boss2.foeMagic.setName("Sadness of the Deads");
+			boss2.foeMagic.setDamages(85);
+			boss2.foeMagic2.setName("Personal Sorrow");
+			boss2.foeMagic2.setDamages(65);
+			boss2.foeMagic3.setName("Tear Drop");
+			boss2.foeMagic3.setDamages(45);
+			hero.bossFight(boss2);
+			
+	//Second boss chest and fight end text
 			
 	//Third round of rooms
 			
@@ -449,7 +478,23 @@ public class Game {
 			
 	//Third boss fight
 			
-	//Third boss chest
+			Foe boss3 = new Foe();
+			boss3.setName("Lady Pain");
+			boss3.setArmor(30);
+			boss3.setStrength(30);
+			boss3.setDext(30);
+			boss3.setIntell(30);
+			boss3.setLife((boss3.getStrength()-10)*100);
+			boss3.setType("air");
+			boss3.foeMagic.setName("Origin of Pain");
+			boss3.foeMagic.setDamages(60);
+			boss3.foeMagic2.setName("Infused Pain");
+			boss3.foeMagic2.setDamages(70);
+			boss3.foeMagic3.setName("Direct Pain");
+			boss3.foeMagic3.setDamages(50);
+			hero.bossFight(boss3);
+			
+	//Third boss chest and fight end text
 		
 	//Final boss text
 			
