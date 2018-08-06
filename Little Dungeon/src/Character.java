@@ -357,7 +357,7 @@ public class Character {
 							System.out.println("\n");
 							System.out.println(ennemi.getName()+" uses "+ennemi.foeMagic.getName()+"!");
 							if((ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())<=0) {
-								System.out.println("You heroically parry his magic and take no damages!");
+								System.out.println("You heroically parry his magic with your "+heroShield.getName()+" and take no damages!");
 							}
 							else {
 							System.out.println("You get hit for "+(ennemi.foeMagic.getDamages()+ennemi.getIntell()-getMagicArmor())+" damages!");
@@ -369,7 +369,7 @@ public class Character {
 							int y = (int) Math.floor(Math.random() * 101)+(ennemi.getDext()-getDext());
 							if(y<70) {
 								if((ennemi.getStrength()-getArmor())<=0) {
-									System.out.println("You heroically parry the blow and take no damages!");
+									System.out.println("You heroically parry the blow with your "+heroShield.getName()+" and take no damages!");
 								}
 								else {
 									System.out.println("He lands a hit of "+(ennemi.getStrength()-getArmor())+" damages!");
