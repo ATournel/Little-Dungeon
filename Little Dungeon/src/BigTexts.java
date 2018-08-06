@@ -53,7 +53,7 @@ public class BigTexts {
 		System.out.println("");Thread.sleep(200);
 		System.out.println("");Thread.sleep(200);
 		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(4000);
+		System.out.println("");Thread.sleep(5000);
 		
 	}
 	
@@ -86,7 +86,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -118,7 +118,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -150,7 +150,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -182,7 +182,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -214,7 +214,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -246,7 +246,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(4000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -278,7 +278,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(4000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -310,7 +310,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -388,7 +388,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -420,7 +420,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -452,7 +452,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -484,7 +484,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -516,7 +516,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -548,7 +548,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		
 	}
 	
@@ -582,7 +582,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -614,7 +614,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -646,7 +646,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -678,7 +678,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -710,7 +710,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -742,7 +742,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");Thread.sleep(3000);
+		System.out.println("");Thread.sleep(5000);
 	}
 	
 	public void gameOver() throws InterruptedException {	    
@@ -779,7 +779,7 @@ public class BigTexts {
 		System.out.println("");Thread.sleep(200);
 		System.out.println("");Thread.sleep(200);
 		System.out.println("");Thread.sleep(200);
-		System.out.println("");Thread.sleep(4000);
+		System.out.println("");Thread.sleep(5000);
 	}
 	
 }

@@ -100,6 +100,8 @@ public class Game {
 			Room room1 = new Room();
 			Chest chest1 = new Chest();
 			
+			
+			
 	//Opening tower text
 			
 	//First round of rooms
@@ -231,6 +233,8 @@ public class Game {
 			boss1.foeMagic3.setDamages(40);
 			hero.bossFight(boss1);
 	//First boss chest and fight end text
+			
+			chest1.bossChest1(hero);
 			
 	//Second round of rooms
 			

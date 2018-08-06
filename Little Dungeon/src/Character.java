@@ -17,8 +17,29 @@ public class Character {
 			int shieldArmor;
 			int healthPotionNb;
 			int manaPotionNb;
+			int legendItem1;
+			int legendItem2;
+			int legendItem3;
 			
 			
+			public int getLegendItem1() {
+				return legendItem1;
+			}
+			public void setLegendItem1(int legendItem1) {
+				this.legendItem1 = legendItem1;
+			}
+			public int getLegendItem2() {
+				return legendItem2;
+			}
+			public void setLegendItem2(int legendItem2) {
+				this.legendItem2 = legendItem2;
+			}
+			public int getLegendItem3() {
+				return legendItem3;
+			}
+			public void setLegendItem3(int legendItem3) {
+				this.legendItem3 = legendItem3;
+			}
 			public int getHealthPotionNb() {
 				return healthPotionNb;
 			}
