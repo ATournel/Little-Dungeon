@@ -3,12 +3,14 @@ import java.util.*;
 public class Chest {
 
 	
-	public void chestFound(Hero perso) {
+	public void chestFound(Hero perso) throws InterruptedException {
 		Scanner scan4=new Scanner(System.in);
-		System.out.println("You found a chest, great!");
+		System.out.println("You found a chest after clearing the room, great!");
+		Thread.sleep(1700);
 		if(perso.getNbOfKeys()>=1) {
 			System.out.println("Do you want to open it using a small key?'y'or'n'");
 			String heroChest=scan4.nextLine();
+			Thread.sleep(1700);
 			if(heroChest.equals("y")) {
 				int chestShuffle=(int) Math.floor(Math.random()*15);
 				if(chestShuffle==0) {	//iron sword

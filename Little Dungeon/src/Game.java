@@ -10,7 +10,7 @@ public class Game {
 		Scanner scan2 = new Scanner(System.in);
 		hero.setLife(1);
 		
-		
+	//Title and Intro
 		//text1.printTitle();
 		//text1.printIntro();
 		
@@ -98,10 +98,15 @@ public class Game {
 			
 			
 			Room room1 = new Room();
+			Chest chest1 = new Chest();
 			
+	//Opening tower text
+			
+	//First round of rooms
 			
 			for(int i=0; i<=6; i++) {
 				int trap=((int) Math.floor(Math.random() * 20));
+				Thread.sleep(1700);
 				if(trap<=1) {
 					if(hero.getStrength()>=16) {
 						System.out.println("You nearly fall into a pitfall as you enter the room but you were strong enough to hold yourself out!");
@@ -132,6 +137,7 @@ public class Game {
 					
 				}Thread.sleep(1700);
 				int shuffle = (int) Math.floor(Math.random() * 10);
+				Thread.sleep(1700);
 				if(shuffle==0) {
 					room1.setName("small altar room");
 					room1.setDescription("The air in this room feels strange and suddenly gets thicker!");
@@ -183,6 +189,11 @@ public class Game {
 					room1.explore10(hero, ennemi);
 				}
 				
+				int chest=(int) Math.floor(Math.random());
+				if(chest==0) {
+					chest1.chestFound(hero);
+				}
+				
 				System.out.println("This room is empty, will you proceed to the next one?\n'y'or'n'?");
 				String choix="n";
 				while(choix.equals("n")) {
@@ -200,6 +211,249 @@ public class Game {
 					
 				}
 			}
+		
+	//First boss text
+			
+	//First boss fight
+			Foe boss1 = new Foe();
+			hero.bossFight(boss1);
+	//First boss chest
+			
+	//Second round of rooms
+			
+			for(int i=0; i<=6; i++) {
+				int trap=((int) Math.floor(Math.random() * 20));
+				Thread.sleep(1700);
+				if(trap<=1) {
+					if(hero.getStrength()>=16) {
+						System.out.println("You nearly fall into a pitfall as you enter the room but you were strong enough to hold yourself out!");
+					}
+					else {
+						System.out.println("You fall into a pitfall as you enter the room, you eventually manage to get yourself out: 50 damages!");
+						hero.setLife(hero.getLife()-50);
+					}
+				}
+				else if(trap<=3) {
+					if(hero.getDext()>=16) {
+						System.out.println("A huge rock falls over your head as you enter the room but you were nimble enough to dodge it!");
+					}
+					else {
+						System.out.println("A huge rock falls over your head as you enter the room, you dodge it but your back still gets hurt: 50 damages!");
+						hero.setLife(hero.getLife()-50);
+					}
+					
+				}
+				else if(trap<=5) {
+					if(hero.getIntell()>=16) {
+						System.out.println("A wave of pure magic hurls at you but you were clever enough to send it to oblivion with a few magic signs!");
+					}
+					else {
+						System.out.println("A wave of pure magic hurls at you, you raise your shield at the last moment but still get hit: 50 damages!");
+						hero.setLife(hero.getLife()-50);
+					}
+					
+				}Thread.sleep(1700);
+				int shuffle = (int) Math.floor(Math.random() * 10);
+				Thread.sleep(1700);
+				if(shuffle==0) {
+					room1.setName("small altar room");
+					room1.setDescription("The air in this room feels strange and suddenly gets thicker!");
+					room1.explore1(hero, ennemi);
+				}
+				else if(shuffle==1) {
+					room1.setName("dark room");
+					room1.setDescription("Don't you hear something? It sounds like......wing flaps!");
+					room1.explore2(hero, ennemi);
+				}
+				else if(shuffle==2) {
+					room1.setName("laboratory");
+					room1.setDescription("You see multiple broken glass cylinders and the floor feels sticky under your boots.");
+					room1.explore3(hero, ennemi);
+				}
+				else if(shuffle==3) {
+					room1.setName("bloody room");
+					room1.setDescription("Woaw, a chill shivers down your spine...You've got a baaad feeling about this one.");
+					room1.explore4(hero, ennemi);
+				}
+				else if(shuffle==4) {
+					room1.setName("inside graveyard");
+					room1.setDescription("It stinks! How the hell can it stinks that bad?!");
+					room1.explore5(hero, ennemi);
+				}
+				else if(shuffle==5) {
+					room1.setName("nesting room");
+					room1.setDescription("In the center of the room lies a nest with several eggs in it..Are they eatable?");
+					room1.explore6(hero, ennemi);
+				}
+				else if(shuffle==6) {
+					room1.setName("large room");
+					room1.setDescription("In the center, you see a large pile of bones. Suddenly, they seem to be moving..");
+					room1.explore7(hero, ennemi);
+				}
+				else if(shuffle==7) {
+					room1.setName("tresor room");
+					room1.setDescription("Laying all over the room floor are gold coins. What kind of sick man would keep is tresor in this tower?");
+					room1.explore8(hero, ennemi);
+				}
+				else if(shuffle==8) {
+					room1.setName("large altar room");
+					room1.setDescription("Ok, there is something not funny about this one, not funny at all..");
+					room1.explore9(hero, ennemi);
+				}
+				else if(shuffle==9) {
+					room1.setName("water basin room");
+					room1.setDescription("You can see something moving in this basin. You bet it won't be a dolphin..");
+					room1.explore10(hero, ennemi);
+				}
+				
+				int chest=(int) Math.floor(Math.random());
+				if(chest==0) {
+					chest1.chestFound(hero);
+				}
+				
+				System.out.println("This room is empty, will you proceed to the next one?\n'y'or'n'?");
+				String choix="n";
+				while(choix.equals("n")) {
+					Scanner scan3=new Scanner(System.in);
+					choix=scan3.nextLine();
+					if(choix.equals("y")) {
+						System.out.println("You walk towards the door, let us go further..");
+						Thread.sleep(1700);
+					}
+					else if(choix.equals("n")){
+						System.out.println("Ok hero, take a minute to catch your breath..");
+						Thread.sleep(1700);
+						System.out.println("Ready now?'y'or'n'?");
+					}
+					
+				}
+			}
+			
+	//Second boss text
+			
+	//Second boss fight
+			
+	//Second boss chest
+			
+	//Third round of rooms
+			
+			for(int i=0; i<=6; i++) {
+				int trap=((int) Math.floor(Math.random() * 20));
+				Thread.sleep(1700);
+				if(trap<=1) {
+					if(hero.getStrength()>=16) {
+						System.out.println("You nearly fall into a pitfall as you enter the room but you were strong enough to hold yourself out!");
+					}
+					else {
+						System.out.println("You fall into a pitfall as you enter the room, you eventually manage to get yourself out: 50 damages!");
+						hero.setLife(hero.getLife()-50);
+					}
+				}
+				else if(trap<=3) {
+					if(hero.getDext()>=16) {
+						System.out.println("A huge rock falls over your head as you enter the room but you were nimble enough to dodge it!");
+					}
+					else {
+						System.out.println("A huge rock falls over your head as you enter the room, you dodge it but your back still gets hurt: 50 damages!");
+						hero.setLife(hero.getLife()-50);
+					}
+					
+				}
+				else if(trap<=5) {
+					if(hero.getIntell()>=16) {
+						System.out.println("A wave of pure magic hurls at you but you were clever enough to send it to oblivion with a few magic signs!");
+					}
+					else {
+						System.out.println("A wave of pure magic hurls at you, you raise your shield at the last moment but still get hit: 50 damages!");
+						hero.setLife(hero.getLife()-50);
+					}
+					
+				}Thread.sleep(1700);
+				int shuffle = (int) Math.floor(Math.random() * 10);
+				Thread.sleep(1700);
+				if(shuffle==0) {
+					room1.setName("small altar room");
+					room1.setDescription("The air in this room feels strange and suddenly gets thicker!");
+					room1.explore1(hero, ennemi);
+				}
+				else if(shuffle==1) {
+					room1.setName("dark room");
+					room1.setDescription("Don't you hear something? It sounds like......wing flaps!");
+					room1.explore2(hero, ennemi);
+				}
+				else if(shuffle==2) {
+					room1.setName("laboratory");
+					room1.setDescription("You see multiple broken glass cylinders and the floor feels sticky under your boots.");
+					room1.explore3(hero, ennemi);
+				}
+				else if(shuffle==3) {
+					room1.setName("bloody room");
+					room1.setDescription("Woaw, a chill shivers down your spine...You've got a baaad feeling about this one.");
+					room1.explore4(hero, ennemi);
+				}
+				else if(shuffle==4) {
+					room1.setName("inside graveyard");
+					room1.setDescription("It stinks! How the hell can it stinks that bad?!");
+					room1.explore5(hero, ennemi);
+				}
+				else if(shuffle==5) {
+					room1.setName("nesting room");
+					room1.setDescription("In the center of the room lies a nest with several eggs in it..Are they eatable?");
+					room1.explore6(hero, ennemi);
+				}
+				else if(shuffle==6) {
+					room1.setName("large room");
+					room1.setDescription("In the center, you see a large pile of bones. Suddenly, they seem to be moving..");
+					room1.explore7(hero, ennemi);
+				}
+				else if(shuffle==7) {
+					room1.setName("tresor room");
+					room1.setDescription("Laying all over the room floor are gold coins. What kind of sick man would keep is tresor in this tower?");
+					room1.explore8(hero, ennemi);
+				}
+				else if(shuffle==8) {
+					room1.setName("large altar room");
+					room1.setDescription("Ok, there is something not funny about this one, not funny at all..");
+					room1.explore9(hero, ennemi);
+				}
+				else if(shuffle==9) {
+					room1.setName("water basin room");
+					room1.setDescription("You can see something moving in this basin. You bet it won't be a dolphin..");
+					room1.explore10(hero, ennemi);
+				}
+				
+				int chest=(int) Math.floor(Math.random());
+				if(chest==0) {
+					chest1.chestFound(hero);
+				}
+				
+				System.out.println("This room is empty, will you proceed to the next one?\n'y'or'n'?");
+				String choix="n";
+				while(choix.equals("n")) {
+					Scanner scan3=new Scanner(System.in);
+					choix=scan3.nextLine();
+					if(choix.equals("y")) {
+						System.out.println("You walk towards the door, let us go further..");
+						Thread.sleep(1700);
+					}
+					else if(choix.equals("n")){
+						System.out.println("Ok hero, take a minute to catch your breath..");
+						Thread.sleep(1700);
+						System.out.println("Ready now?'y'or'n'?");
+					}
+					
+				}
+			}
+			
+	//Third boss text
+			
+	//Third boss fight
+			
+	//Third boss chest
+		
+	//Final boss text
+			
+	//Final boss!
 			
 			
 			}

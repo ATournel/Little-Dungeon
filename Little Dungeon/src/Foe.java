@@ -12,5 +12,6 @@ public class Foe extends Character {
 	}
 	
 	Magic foeMagic = new Magic();
-	
+	Magic foeMagic2 = new Magic();
+	Magic foeMagic3 = new Magic();
 }
