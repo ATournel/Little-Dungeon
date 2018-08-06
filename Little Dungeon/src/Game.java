@@ -106,7 +106,7 @@ public class Game {
 			
 	//First round of rooms
 			
-			for(int i=0; i<=6; i++) {
+	/*		for(int i=0; i<=6; i++) {
 				int trap=((int) Math.floor(Math.random() * 20));
 				Thread.sleep(1700);
 				if(trap<=1) {
@@ -367,7 +367,7 @@ public class Game {
 			hero.bossFight(boss2);
 			
 	//Second boss chest and fight end text
-			
+			chest1.bossChest2(hero);
 	//Third round of rooms
 			
 			for(int i=0; i<=6; i++) {
@@ -497,9 +497,9 @@ public class Game {
 			boss3.foeMagic3.setName("Direct Pain");
 			boss3.foeMagic3.setDamages(50);
 			hero.bossFight(boss3);
-			
+			*/
 	//Third boss chest and fight end text
-		
+		chest1.bossChest3(hero);
 	//Final boss text
 			
 	//Final boss!
