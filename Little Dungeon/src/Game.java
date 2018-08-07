@@ -5,17 +5,21 @@ public class Game {
 
 	public static void main(String[] args) throws InterruptedException {
 		Hero hero = new Hero();
+		Foe bossF = new Foe();
+		Foe bossF2 = new Foe();
 		BigTexts text1 = new BigTexts();
 		Scanner scan = new Scanner(System.in);
 		Scanner scan2 = new Scanner(System.in);
 		hero.setLife(1);
+		bossF.setLife(1);
+		bossF2.setLife(1);
 		
 	//Title and Intro
 		//text1.printTitle();
 		//text1.printIntro();
 		
 		String x = scan.nextLine();
-		while(x.equals("y") && hero.getLife()>0) {
+		while(x.equals("y") && hero.getLife()>0 && bossF.getLife()>0) {
 			
 			text1.statExplained();
 		
@@ -100,13 +104,13 @@ public class Game {
 			Room room1 = new Room();
 			Chest chest1 = new Chest();
 			
-			
+		/*	
 			
 	//Opening tower text
-			
+			text1.openingTowerText();
 	//First round of rooms
 			
-	/*		for(int i=0; i<=6; i++) {
+			for(int i=0; i<=6; i++) {
 				int trap=((int) Math.floor(Math.random() * 20));
 				Thread.sleep(1700);
 				if(trap<=1) {
@@ -215,7 +219,7 @@ public class Game {
 			}		
 		
 	//First boss text
-			
+		*/text1.firstBossText();	/*
 	//First boss fight
 			Foe boss1 = new Foe();
 			boss1.setName("Lady Pestilence");
@@ -347,7 +351,7 @@ public class Game {
 			}
 			
 	//Second boss text
-			
+		*/	text1.secondBossText();/*
 	//Second boss fight
 			
 			Foe boss2 = new Foe();
@@ -479,7 +483,7 @@ public class Game {
 			}
 			
 	//Third boss text
-			
+		*/	text1.thirdBossText();/*
 	//Third boss fight
 			
 			Foe boss3 = new Foe();
@@ -497,12 +501,18 @@ public class Game {
 			boss3.foeMagic3.setName("Direct Pain");
 			boss3.foeMagic3.setDamages(50);
 			hero.bossFight(boss3);
-			*/
+			
 	//Third boss chest and fight end text
-		chest1.bossChest3(hero);
+		*/chest1.bossChest3(hero);
 	//Final boss text
 			
 	//Final boss!
+		
+	//Final boss2 text
+		
+	//Final boss2!
+		
+	//Endings
 			
 			
 			}
@@ -512,7 +522,10 @@ public class Game {
 		else if(hero.getLife()<=0){
 			text1.dyingText();		
 		}
-		else {
+		else if(bossF.getLife()<=0){
+			
+		}
+		else if(bossF2.getLife()<=0) {
 			
 		}
 		text1.gameOver();

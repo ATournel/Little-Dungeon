@@ -272,7 +272,7 @@ public class Chest {
 	}
 	
 	public void bossChest1(Hero perso) throws InterruptedException {
-		/*System.out.println("");
+		System.out.println("");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -441,7 +441,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("");*/
+		System.out.println("");
 		
 		System.out.println("You approach the chest, cleaning some of the entrails on it you uncover three locks..");
 		Thread.sleep(2000);
@@ -557,7 +557,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                           Lords Sorrow seems to crumble on itself end disappears in a tears explosion.");
+		System.out.println("                            Lord Sorrow seems to crumble on itself end disappears in a tears explosion.");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -653,7 +653,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                                   Where last stood your ennemi you find a large chest,");
+		System.out.println("                                      Where last stood your ennemi you find a large chest,");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -685,7 +685,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                                           still dripping with black tears...");
+		System.out.println("                                              still dripping with black tears...");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -978,7 +978,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                           Lords Sorrow seems to crumble on itself end disappears in a tears explosion.");
+		System.out.println("                           Lady Pain disappears in a deafening scream that seems to bend space itself.");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -1010,7 +1010,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                            You suddenly feel the sadness of all the poor souls you killed to get here.");
+		System.out.println("                              You raise your hands to your head, dropping your gear on the floor,");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -1042,7 +1042,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                          Eventually, the sorrow gets bearable but you feel it will never really leave you...");
+		System.out.println("                                      in a poor attempt to protect your ears...");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -1074,7 +1074,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                                     Where last stood your ennemi you find a large chest,");
+		System.out.println("                          The room suddenly gets quiet, just as you tought you would loose your sanity.");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -1106,7 +1106,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                                             still dripping with black tears...");
+		System.out.println("                       As you open your eyes, you see a large chest, still vibrating from the horrible scream..");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -1165,7 +1165,7 @@ public class Chest {
 							perso.setMagicArmor((perso.getDext()-10)+Character.heroArmor.getMagicArmor()+Character.heroShield.getMagicArmor());
 							perso.setLegendItem1(3);
 							Thread.sleep(2000);
-							perso.setLegendItem2(3);
+							perso.setLegendItem3(3);
 						}
 						else {
 							System.out.print("You really should have!");
@@ -1189,7 +1189,7 @@ public class Chest {
 							perso.setMagicArmor((perso.getDext()-10)+Character.heroArmor.getMagicArmor()+Character.heroShield.getMagicArmor());
 							perso.setLegendItem1(2);
 							Thread.sleep(2000);
-							perso.setLegendItem2(2);
+							perso.setLegendItem3(2);
 						}
 						else {
 							System.out.print("You really should have!");
@@ -1212,7 +1212,7 @@ public class Chest {
 							perso.setDamages(perso.getStrength()+Character.heroWeapon.getDamage());
 							perso.setLegendItem1(1);
 							Thread.sleep(2000);
-							perso.setLegendItem2(1);
+							perso.setLegendItem3(1);
 						}
 						else {
 							System.out.print("You really should have!");
@@ -1233,5 +1233,9 @@ public class Chest {
 			}
 		}
 	}
-	
+   
+    
+    
+    
+    
 }
