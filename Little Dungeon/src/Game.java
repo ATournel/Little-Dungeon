@@ -15,8 +15,8 @@ public class Game {
 		bossF2.setLife(1);
 		
 	//Title and Intro
-		//text1.printTitle();
-		//text1.printIntro();
+		text1.printTitle();
+		text1.printIntro();
 		
 		String x = scan.nextLine();
 		while(x.equals("y") && hero.getLife()>0 && bossF.getLife()>0 && bossF2.getLife()>0) {
@@ -104,13 +104,13 @@ public class Game {
 			Room room1 = new Room();
 			Chest chest1 = new Chest();
 			
-		/*	
+			
 			
 	//Opening tower text
 			text1.openingTowerText();
 	//First round of rooms
 			
-			for(int i=0; i<=6; i++) {
+		for(int i=0; i<=6; i++) {
 				int trap=((int) Math.floor(Math.random() * 20));
 				Thread.sleep(1700);
 				if(trap<=1) {
@@ -181,7 +181,7 @@ public class Game {
 				}
 				else if(shuffle==7) {
 					room1.setName("tresor room");
-					room1.setDescription("Laying all over the room floor are gold coins. What kind of sick man would keep is tresor in this tower?");
+					room1.setDescription("Laying all over the room floor are gold coins. What kind of sick man would keep his tresor in this tower?");
 					room1.explore8(hero, ennemi);
 				}
 				else if(shuffle==8) {
@@ -195,8 +195,8 @@ public class Game {
 					room1.explore10(hero, ennemi);
 				}
 				
-				int chest=(int) Math.floor(Math.random());
-				if(chest==0) {
+				int chest=(int) Math.floor(Math.random()*100);
+				if(chest<=49) {
 					chest1.chestFound(hero);
 				}
 				
@@ -348,7 +348,7 @@ public class Game {
 					}
 					
 				}
-			}
+			}		
 			
 	//Second boss text
 			text1.secondBossText();
@@ -481,7 +481,7 @@ public class Game {
 					}
 					
 				}
-			}
+			}		
 			
 	//Third boss text
 			text1.thirdBossText();
@@ -505,9 +505,9 @@ public class Game {
 			
 	//Third boss chest and fight end text
 		chest1.bossChest3(hero);
-		text1.bossDown();*/
+		text1.bossDown();
 	//Final boss text
-			
+			text1.finalBossText();
 	//Final boss!
 		bossF.setName("Nameless King");
 		bossF.setArmor(35);
@@ -523,13 +523,16 @@ public class Game {
 		bossF.foeMagic3.setName("Direct Pain");
 		bossF.foeMagic3.setDamages(55);
 		hero.finalBossFight(bossF);
-	//Final boss2 text
-		if((hero.getLegendItem1()==1||hero.getLegendItem1()==2||hero.getLegendItem1()==3)&&(hero.getLegendItem2()==1||hero.getLegendItem2()==2||hero.getLegendItem2()==3)&&(hero.getLegendItem3()==1||hero.getLegendItem3()==2||hero.getLegendItem3()==3)) {
+		
+		text1.finalBossText2();
+	
+		if((hero.getLegendItem1()==1||hero.getLegendItem1()==2||hero.getLegendItem1()==3)&&(hero.getLegendItem2()==1||hero.getLegendItem2()==2||hero.getLegendItem2()==3)&&(hero.getLegendItem3()==1||hero.getLegendItem3()==2||hero.getLegendItem3()==3)&&hero.getLife()>0) {
 			//Final boss good ending
 			bossF.setLife(0);
 		}
-		else {
+		else if(hero.getLife()>0){
 			//Final boss2!
+			text1.finalBoss2Text();
 			bossF2.setName("Lord Death");
 			bossF2.setArmor(40);
 			bossF2.setStrength(40);
@@ -564,11 +567,11 @@ public class Game {
 		}
 		else if(bossF.getLife()<1) {
 		//Good legendary items ending
-			
+			text1.finalGoodEnding(hero);
 		}
 		else if(bossF2.getLife()<1) {
 		//Bad legendary items ending
-			
+			text1.finalBadEnding();
 		}
 		
 		text1.gameOver();

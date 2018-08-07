@@ -431,7 +431,7 @@ public class Room {
 			
 			ennemi.setName("undead");
 			ennemi.setArmor(3);
-			ennemi.setStrength(5);
+			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
 			ennemi.setLife((ennemi.getStrength()-10)*100);
@@ -445,7 +445,7 @@ public class Room {
 			Thread.sleep(1700);
 			ennemi.setName("undead");
 			ennemi.setArmor(3);
-			ennemi.setStrength(5);
+			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
 			ennemi.setLife((ennemi.getStrength()-10)*100);

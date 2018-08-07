@@ -557,7 +557,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                            Lord Sorrow seems to crumble on itself end disappears in a tears explosion.");
+		System.out.println("                            Lord Sorrow seems to crumble on itself end disappears in a tear explosion.");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -948,10 +948,10 @@ public class Chest {
 							Thread.sleep(2000);
 						}
 					}
-					perso.setNbOfKeys(perso.getNbOfKeys()-3);
+					
 					
 				}
-				
+				perso.setNbOfKeys(perso.getNbOfKeys()-3);
 				
 			}
 			else {
@@ -1135,7 +1135,7 @@ public class Chest {
 		System.out.println("");
 		System.out.println("");
 		
-		System.out.println("You approach the chest, and as the remaining tears sleep away you see three locks..");
+		System.out.println("You approach the chest, and as the vibraiting effect fades away you see three locks..");
 		Thread.sleep(2000);
 		if(perso.getNbOfKeys()<3) {
 			System.out.println("Unfortunately you don't have enough keys to open it.");
