@@ -239,7 +239,7 @@ public class Game {
 	//First boss chest and fight end text
 			
 			chest1.bossChest1(hero);
-			
+			text1.bossDown();			
 	//Second round of rooms
 			
 			for(int i=0; i<=6; i++) {
@@ -372,6 +372,7 @@ public class Game {
 			
 	//Second boss chest and fight end text
 			chest1.bossChest2(hero);
+			text1.bossDown();
 	//Third round of rooms
 			
 			for(int i=0; i<=6; i++) {
@@ -503,7 +504,8 @@ public class Game {
 			hero.bossFight(boss3);
 			
 	//Third boss chest and fight end text
-		chest1.bossChest3(hero);*/
+		chest1.bossChest3(hero);
+		text1.bossDown();*/
 	//Final boss text
 			
 	//Final boss!

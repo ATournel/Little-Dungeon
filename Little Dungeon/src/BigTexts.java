@@ -1934,7 +1934,12 @@ public class BigTexts {
 	}
 	
 	public void bossDown() throws InterruptedException {
-		System.out.println("");
+		System.out.println("That ennemi was really something else...");
+		Thread.sleep(2000);
+		System.out.println("You know this is not over.");
+		Thread.sleep(2000);
+		System.out.println("You take the staircase at the other side of the room and proceed to the next floor...");
+		Thread.sleep(3000);
 	}
 	
 }
