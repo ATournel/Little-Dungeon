@@ -19,7 +19,7 @@ public class Game {
 		//text1.printIntro();
 		
 		String x = scan.nextLine();
-		while(x.equals("y") && hero.getLife()>0 && bossF.getLife()>0) {
+		while(x.equals("y") && hero.getLife()>0 && bossF.getLife()>0 && bossF2.getLife()>0) {
 			
 			text1.statExplained();
 		
@@ -219,7 +219,7 @@ public class Game {
 			}		
 		
 	//First boss text
-		*/text1.firstBossText();	/*
+		text1.firstBossText();	
 	//First boss fight
 			Foe boss1 = new Foe();
 			boss1.setName("Lady Pestilence");
@@ -351,7 +351,7 @@ public class Game {
 			}
 			
 	//Second boss text
-		*/	text1.secondBossText();/*
+			text1.secondBossText();
 	//Second boss fight
 			
 			Foe boss2 = new Foe();
@@ -483,7 +483,7 @@ public class Game {
 			}
 			
 	//Third boss text
-		*/	text1.thirdBossText();/*
+			text1.thirdBossText();
 	//Third boss fight
 			
 			Foe boss3 = new Foe();
@@ -495,7 +495,7 @@ public class Game {
 			boss3.setLife((boss3.getStrength()-10)*100);
 			boss3.setType("air");
 			boss3.foeMagic.setName("Origin of Pain");
-			boss3.foeMagic.setDamages(60);
+			boss3.foeMagic.setDamages(90);
 			boss3.foeMagic2.setName("Infused Pain");
 			boss3.foeMagic2.setDamages(70);
 			boss3.foeMagic3.setName("Direct Pain");
@@ -503,31 +503,72 @@ public class Game {
 			hero.bossFight(boss3);
 			
 	//Third boss chest and fight end text
-		*/chest1.bossChest3(hero);
+		chest1.bossChest3(hero);*/
 	//Final boss text
 			
 	//Final boss!
-		
+		bossF.setName("Nameless King");
+		bossF.setArmor(35);
+		bossF.setStrength(35);
+		bossF.setDext(35);
+		bossF.setIntell(35);
+		bossF.setLife((bossF.getStrength()-15)*100);
+		bossF.setType("neutral");
+		bossF.foeMagic.setName("Origin of Pain");
+		bossF.foeMagic.setDamages(95);
+		bossF.foeMagic2.setName("Infused Pain");
+		bossF.foeMagic2.setDamages(75);
+		bossF.foeMagic3.setName("Direct Pain");
+		bossF.foeMagic3.setDamages(55);
+		hero.finalBossFight(bossF);
 	//Final boss2 text
+		if((hero.getLegendItem1()==1||hero.getLegendItem1()==2||hero.getLegendItem1()==3)&&(hero.getLegendItem2()==1||hero.getLegendItem2()==2||hero.getLegendItem2()==3)&&(hero.getLegendItem3()==1||hero.getLegendItem3()==2||hero.getLegendItem3()==3)) {
+			//Final boss good ending
+			bossF.setLife(0);
+		}
+		else {
+			//Final boss2!
+			bossF2.setName("Lord Death");
+			bossF2.setArmor(40);
+			bossF2.setStrength(40);
+			bossF2.setDext(40);
+			bossF2.setIntell(40);
+			bossF2.setLife((bossF2.getStrength()-15)*100);
+			bossF2.setType("neutral");
+			bossF2.foeMagic.setName("Origin of Pain");
+			bossF2.foeMagic.setDamages(100);
+			bossF2.foeMagic2.setName("Infused Pain");
+			bossF2.foeMagic2.setDamages(80);
+			bossF2.foeMagic3.setName("Direct Pain");
+			bossF2.foeMagic3.setDamages(60);
+			hero.finalBossFight(bossF2);
+			bossF2.setLife(0);
+			
+		}
+	
 		
-	//Final boss2!
 		
 	//Endings
 			
 			
 			}
 		if(x.equals("n")) {
+		//Did not open the door
 			text1.losingText();
 		}
 		else if(hero.getLife()<=0){
+		//Hero died
 			text1.dyingText();		
 		}
-		else if(bossF.getLife()<=0){
+		else if(bossF.getLife()<1) {
+		//Good legendary items ending
 			
 		}
-		else if(bossF2.getLife()<=0) {
+		else if(bossF2.getLife()<1) {
+		//Bad legendary items ending
 			
 		}
+		
 		text1.gameOver();
 	}
 

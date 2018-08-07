@@ -1933,4 +1933,8 @@ public class BigTexts {
 		System.out.println("");Thread.sleep(5000);
 	}
 	
+	public void bossDown() throws InterruptedException {
+		System.out.println("");
+	}
+	
 }
