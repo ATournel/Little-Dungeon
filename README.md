@@ -2,7 +2,7 @@
 
 # *Little Dungeon* Wiki
 
-**Little Dungeon** is a dungeon crawler game only playable on console.
+**Little Dungeon** is a dungeon crawler game only playable on the eclipse console.
 
 It is written in **Java**.
 
