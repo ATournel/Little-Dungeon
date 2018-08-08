@@ -18,7 +18,8 @@ It uses:
    I used inheritance not to repeat code for similar classes, like Hero class and Foe class both inherit from the Character class.  
    It also has the following classes:  
    
-     - Chest: randomly found after each fight, this class determines wich possible loot to get in a regular or boss chest  
+     - Chest: randomly found after each fight, this class determines wich possible loot to get in a regular
+     or boss chest  
      - Room: used to create 10 pregenerated rooms with 1, 2 or 3 foes in it  
      - BigTexts: where I wrote all the methods containing long texts  
      - Magic: to manage the five different kinds of hero magics in the game  
@@ -26,7 +27,7 @@ It uses:
      - Armor: same as Weapon  
      - Potion: I created this class to have different kinds of potions(life and mana)
      - Game: the Game class is where all the magic happens, it contains the *main* method
-     
+          
 ### 2. Loops
 
    Loops are used in this game for repetitive consecutive actions such as generating a trap, followed by a room and then a chest but five times in a row.
@@ -42,6 +43,7 @@ It uses:
 
    There are a lot of randoms involded. 
    I used them for:
+   
       - Traps: player randomly face a trap when entering a room
       - Loots: foes randomly drop some loot, loot also randomly determined
       - Chest: same as foe loots
