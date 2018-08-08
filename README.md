@@ -18,9 +18,8 @@ It uses:
    I used inheritance not to repeat code for similar classes, like Hero class and Foe class both inherit from the Character class.  
    It also has the following classes:  
    
-     - Chest: randomly found after each fight, this class determines wich possible loot to get in a regular
-     or boss chest  
-     - Room: used to create 10 pregenerated rooms with 1, 2 or 3 foes in it  
+     - Chest: class used to create different chest methodes, regular and boss chest  
+     - Room: used to create 10 pregenerated rooms with several foes in it  
      - BigTexts: where I wrote all the methods containing long texts  
      - Magic: to manage the five different kinds of hero magics in the game  
      - Weapon: to create the equipable weapons for the Hero  
@@ -49,7 +48,8 @@ It uses:
       - Chest: same as foe loots
       - Rooms: randomly select five rooms between the ten available, rooms may repeat themselves
       - Foes: randomly displays 1, 2 or 3 foes in each room the player visits
-      - BossChests: the first one randomly loots a legendary item but the second and third ones loot according to previous loots
+      - BossChests: the first one randomly loots a legendary item but the second and third ones loot according to 
+      previous loots
       
  ### 5. Scanners
  
