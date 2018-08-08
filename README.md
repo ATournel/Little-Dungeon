@@ -17,7 +17,7 @@ It uses:
    I used inheritance not to repeat code for similar classes, like Hero class and Foe class both inherit from the Character class.  
    It also has the following classes:  
      - Chest: randomly found after each fight, this class determines wich possible loot to get in a regular or boss chest  
-     - Room: 10 pregenerated rooms with 1, 2 or 3 foes in it  
+     - Room: used to create 10 pregenerated rooms with 1, 2 or 3 foes in it  
      - BigTexts: where I wrote all the methods containing long texts  
      - Magic: to manage the five different kinds of hero magics in the game  
      - Weapon: to create the equipable weapons for the Hero  
@@ -44,15 +44,16 @@ It uses:
       - Loots: foes randomly drop some loot, loot also randomly determined
       - Chest: same as foe loots
       - Rooms: randomly select five rooms between the ten available, rooms may repeat themselves
-      - BossChests: the first one randomly loots a legendary item but the second and third loot according to previous loots
+      - Foes: randomly displays 1, 2 or 3 foes in each room the player visits
+      - BossChests: the first one randomly loots a legendary item but the second and third ones loot according to previous loots
       
  ### That's it for the technical part.
  
  To end this README, I just have one more thing to say.
  
  Please play the game, I hope you will have some fun, I thought of four different endings for you!
- Don't hesitate to give me some feedback, you most probably face some balancing issues.
  
+ Don't hesitate to give me some feedback, you most probably face some balancing issues. 
  Still, I hope you won't...
  
  Again, have fun, and thank you for reading!
