@@ -11,6 +11,7 @@ It uses:
 * Loops
 * *if* statements (a lot)
 * Randoms
+* Scanners
 
 1. Classes
 
@@ -46,6 +47,10 @@ It uses:
       - Rooms: randomly select five rooms between the ten available, rooms may repeat themselves
       - Foes: randomly displays 1, 2 or 3 foes in each room the player visits
       - BossChests: the first one randomly loots a legendary item but the second and third ones loot according to previous loots
+      
+ 5. Scanners
+ 
+   Scanners are used to allow the player to select one the different choices offered to him.
       
  ### That's it for the technical part.
  
