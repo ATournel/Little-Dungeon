@@ -3979,7 +3979,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                                                          What was this place?'");
+		System.out.println("                                                          What was this place?");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -4072,7 +4072,7 @@ public class BigTexts {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("                                                      where is your family?.");
+		System.out.println("                                                      where is your family?");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");

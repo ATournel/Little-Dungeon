@@ -55,7 +55,7 @@ public class Room {
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire breath");
 			ennemi.foeMagic.setDamages(20);
@@ -69,22 +69,24 @@ public class Room {
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire breath");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("water spirit");
 			ennemi.setArmor(10);
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("ice spike");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -94,33 +96,37 @@ public class Room {
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire breath");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("water spirit");
 			ennemi.setArmor(10);
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("ice spike");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("wind spirit");
 			ennemi.setArmor(10);
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("wind slash");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -144,7 +150,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(50);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("Fang attack");
 			ennemi.foeMagic.setDamages(20);
@@ -158,22 +164,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(50);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("Fang attack");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("bat");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(50);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("Fang attack");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -183,33 +191,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(50);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("Fang attack");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("bat");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(50);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("Fang attack");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("huge bat");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("Huge fang attack");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -233,7 +245,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("blob spit");
 			ennemi.foeMagic.setDamages(20);
@@ -247,22 +259,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("blob spit");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("blob");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("blob spit");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -272,33 +286,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("blob spit");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("blob");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("blob spit");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("bigger blob");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("water beam");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -321,7 +339,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-5)*100);
+			ennemi.setLife(150);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("blood suck");
 			ennemi.foeMagic.setDamages(20);
@@ -335,22 +353,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-5)*100);
+			ennemi.setLife(150);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("blood suck");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("vampire");
 			ennemi.setArmor(5);
 			ennemi.setStrength(11);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-5)*100);
+			ennemi.setLife(150);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("blood suck");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -360,33 +380,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-5)*100);
+			ennemi.setLife(150);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("blood suck");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("vampire");
 			ennemi.setArmor(5);
 			ennemi.setStrength(11);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-5)*100);
+			ennemi.setLife(150);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("blood suck");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("higher vampire");
 			ennemi.setArmor(10);
 			ennemi.setStrength(15);
 			ennemi.setDext(15);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-5)*100);
+			ennemi.setLife(250);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("life drain");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -409,7 +433,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("undead bite");
 			ennemi.foeMagic.setDamages(20);
@@ -423,22 +447,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("undead bite");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("undead");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("undead bite");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -448,33 +474,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("undead bite");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("undead");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("undead bite");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("undead knight");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(150);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("death bite");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -497,7 +527,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("claw strike");
 			ennemi.foeMagic.setDamages(20);
@@ -511,22 +541,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("claw strike");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("harpie");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("claw strike");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -536,33 +568,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("claw strike");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("harpie");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("claw strike");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("harpie mother");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("air");
 			ennemi.foeMagic.setName("double claw strike");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -584,7 +620,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("bone slash");
 			ennemi.foeMagic.setDamages(20);
@@ -598,22 +634,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("bone slash");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("squeletton");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("bone slash");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -623,33 +661,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("bone slash");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("squeletton");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("bone slash");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("giant squeletton");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-8)*100);
+			ennemi.setLife(200);
 			ennemi.setType("earth");
 			ennemi.foeMagic.setName("heavy bone slash");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -671,7 +713,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("coin toss");
 			ennemi.foeMagic.setDamages(20);
@@ -685,22 +727,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("coin toss");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("goblin");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("coin toss");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -710,33 +754,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("coin toss");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("goblin");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(100);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("coin toss");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("goblin king");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(250);
 			ennemi.setType("neutral");
 			ennemi.foeMagic.setName("coin chest strike");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -758,7 +806,7 @@ public class Room {
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(150);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire sword slash");
 			ennemi.foeMagic.setDamages(40);
@@ -772,22 +820,24 @@ public class Room {
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(150);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire sword slash");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("fire axe demon");
 			ennemi.setArmor(10);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire axe strike");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -797,33 +847,37 @@ public class Room {
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(150);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire sword slash");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("fire axe demon");
 			ennemi.setArmor(10);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(200);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire axe strike");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("fire hammer demon");
 			ennemi.setArmor(10);
 			ennemi.setStrength(18);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-10)*100);
+			ennemi.setLife(250);
 			ennemi.setType("fire");
 			ennemi.foeMagic.setName("fire hammer smash");
 			ennemi.foeMagic.setDamages(80);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
@@ -845,7 +899,7 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-9)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("scale trhow");
 			ennemi.foeMagic.setDamages(20);
@@ -859,22 +913,24 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-9)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("scale trhow");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("dryade");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-9)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("scale trhow");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 		}
 		else if (getNbOfFoes()<=8) {
 			System.out.println("Three ennemies attack you!\n");
@@ -884,33 +940,37 @@ public class Room {
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-9)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("scale trhow");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("dryade");
 			ennemi.setArmor(3);
 			ennemi.setStrength(11);
 			ennemi.setDext(5);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-9)*100);
+			ennemi.setLife(100);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("scale trhow");
 			ennemi.foeMagic.setDamages(20);
 			perso.fight(ennemi);
+			}
 			
+			if(perso.getLife()>0) {
 			ennemi.setName("dryade queen");
 			ennemi.setArmor(6);
 			ennemi.setStrength(15);
 			ennemi.setDext(10);
 			ennemi.setIntell(15);
-			ennemi.setLife((ennemi.getStrength()-9)*100);
+			ennemi.setLife(150);
 			ennemi.setType("water");
 			ennemi.foeMagic.setName("scale tornado");
 			ennemi.foeMagic.setDamages(40);
 			perso.fight(ennemi);
+			}
 		}
 		else {
 			System.out.println("You go through this "+getName()+" undangered.. Feels quiet, too quiet..");
