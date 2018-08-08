@@ -16,16 +16,15 @@ It uses:
 ### 1. Classes
 
    I used inheritance not to repeat code for similar classes, like Hero class and Foe class both inherit from the Character class.  
-   It also has the following classes:  
-   
-     - Chest: class used to create different chest methodes, regular and boss chest  
-     - Room: used to create 10 pregenerated rooms with several foes in it  
-     - BigTexts: where I wrote all the methods containing long texts  
-     - Magic: to manage the five different kinds of hero magics in the game  
-     - Weapon: to create the equipable weapons for the Hero  
-     - Armor: same as Weapon  
-     - Potion: I created this class to have different kinds of potions(life and mana)
-     - Game: the Game class is where all the magic happens, it contains the *main* method
+   It also has the following classes:
+   * Chest: class used to create different chest methodes, regular and boss chest  
+   * Room: used to create 10 pregenerated rooms with several foes in it
+   * BigTexts: where I wrote all the methods containing long texts
+   * Magic: to manage the five different kinds of hero magics in the game
+   * Weapon: to create the equipable weapons for the Hero
+   * Armor: same as Weapon
+   * Potion: I created this class to have different kinds of potions(life and mana)
+   * Game: the Game class is where all the magic happens, it contains the *main* method
           
 ### 2. Loops
 
@@ -42,14 +41,13 @@ It uses:
 
    There are a lot of randoms involded. 
    I used them for:
-   
-      - Traps: player randomly face a trap when entering a room
-      - Loots: foes randomly drop some loot, loot also randomly determined
-      - Chest: same as foe loots
-      - Rooms: randomly select five rooms between the ten available, rooms may repeat themselves
-      - Foes: randomly displays 1, 2 or 3 foes in each room the player visits
-      - BossChests: the first one randomly loots a legendary item but the second and third ones loot according to 
-      previous loots
+   * Traps: player randomly face a trap when entering a room
+   * Loots: foes randomly drop some loot, loot also randomly determined
+   * Chest: same as foe loots
+   * Rooms: randomly select five rooms between the ten available, rooms may repeat themselves
+   * Foes: randomly displays 1, 2 or 3 foes in each room the player visits
+   * BossChests: the first one randomly loots a legendary item but the second and third ones loot according to 
+   previous loots
       
  ### 5. Scanners
  
