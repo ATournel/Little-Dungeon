@@ -17,6 +17,7 @@ It uses:
 
    I used inheritance not to repeat code for similar classes, like Hero class and Foe class both inherit from the Character class.  
    It also has the following classes:  
+   
      - Chest: randomly found after each fight, this class determines wich possible loot to get in a regular or boss chest  
      - Room: used to create 10 pregenerated rooms with 1, 2 or 3 foes in it  
      - BigTexts: where I wrote all the methods containing long texts  
