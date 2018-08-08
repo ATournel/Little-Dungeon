@@ -13,7 +13,7 @@ It uses:
 * Randoms
 * Scanners
 
-1. Classes
+### 1. Classes
 
    I used inheritance not to repeat code for similar classes, like Hero class and Foe class both inherit from the Character class.  
    It also has the following classes:  
@@ -26,18 +26,18 @@ It uses:
      - Potion: I created this class to have different kinds of potions(life and mana)
      - Game: the Game class is where all the magic happens, it contains the *main* method
      
-2. Loops
+### 2. Loops
 
    Loops are used in this game for repetitive consecutive actions such as generating a trap, followed by a room and then a chest but five times in a row.
    It allows code to be smaller while the user experience gets longer.
    
-3. *if* statements
+### 3. *if* statements
 
    A lot of conditions are used to determine the following actions available to the player.
    That is where the *if*, *else if* and *esle* statements come at use.
    Wether it is to determine conditions of victory/defeat, wich ending to display to the player or even if a player may or may not open a chest, those statements are very handy.
    
-4. Randoms
+### 4. Randoms
 
    There are a lot of randoms involded. 
    I used them for:
@@ -48,11 +48,11 @@ It uses:
       - Foes: randomly displays 1, 2 or 3 foes in each room the player visits
       - BossChests: the first one randomly loots a legendary item but the second and third ones loot according to previous loots
       
- 5. Scanners
+ ### 5. Scanners
  
    Scanners are used to allow the player to select one the different choices offered to him.
       
- ### That's it for the technical part.
+ ## That's it for the technical part.
  
  To end this README, I just have one more thing to say.
  
